@@ -1,0 +1,15 @@
+// =============================================================================
+// 覆盖 FixIt 主题变量
+// =============================================================================
+
+// 引入中文字体（霞鹜文楷）
+@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css');
+
+// 全局字体
+$global-font-family: 'LXGW WenKai', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+
+// 代码字体
+$code-font-family: 'Fira Code', 'SF Mono', 'Source Code Pro', monospace;
+
+// 页面宽度 — 使用 wide 模式
+// $page-style: 'wide';

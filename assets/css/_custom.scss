@@ -1,0 +1,78 @@
+// =============================================================================
+// 自定义样式
+// =============================================================================
+
+// 自定义页面宽度（可选，与 _override.scss 配合使用）
+[data-page-style='custom'] {
+  %page-style {
+    @include media('xl') {
+      width: ROUND(72%, 2px);
+      max-width: 1600px;
+    }
+    @include media('lg') {
+      width: ROUND(64%, 2px);
+    }
+    @include media('md') {
+      width: ROUND(60%, 2px);
+    }
+  }
+}
+
+// 自定义 Admonition 颜色
+$custom-admonition-map: (
+  tip: (
+    color: #9974F7,
+    bg-color: rgba(153, 116, 247, 0.1),
+  ),
+);
+$admonition-color-map: map-merge($admonition-color-map, $custom-admonition-map);
+
+// 自定义任务列表颜色
+li[data-task='tip'] {
+  --fi-task-color: #9974F7;
+  --fi-checkbox-color: #EA9E36;
+}
+
+// 首页 Profile 区域微调
+.home-profile {
+  .home-avatar {
+    img {
+      border-radius: 50%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// 文章卡片悬停效果
+.post-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+}
+
+// 自定义滚动条（WebKit）
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--fi-scrollbar-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fi-scrollbar-hover-color);
+}

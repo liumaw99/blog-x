@@ -1,0 +1,721 @@
+# =====================================================================================
+# Hugo FixIt 博客配置
+# =====================================================================================
+
+# 站点基础信息
+title = "星云笔记"
+baseURL = "https://example.com"
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-CN"
+languageName = "简体中文"
+hasCJKLanguage = true
+copyright = ""
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+mainSections = ["posts"]
+
+# 主题
+theme = ["FixIt"]
+
+# Front Matter
+[frontmatter]
+_merge = "shallow"
+lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
+
+# 图片处理
+[imaging]
+_merge = "shallow"
+quality = 75
+
+# 菜单配置
+[menus]
+
+[[menus.main]]
+identifier = "posts"
+name = "文章"
+url = "/posts/"
+weight = 1
+[menus.main.params]
+icon = "fa-solid fa-book-open"
+
+[[menus.main]]
+identifier = "categories"
+name = "分类"
+url = "/categories/"
+weight = 2
+[menus.main.params]
+icon = "fa-solid fa-folder-tree"
+
+[[menus.main]]
+identifier = "tags"
+name = "标签"
+url = "/tags/"
+weight = 3
+[menus.main.params]
+icon = "fa-solid fa-tags"
+
+[[menus.main]]
+identifier = "archives"
+name = "归档"
+url = "/archives/"
+weight = 4
+[menus.main.params]
+icon = "fa-solid fa-archive"
+
+[[menus.main]]
+identifier = "about"
+name = "关于"
+url = "/about/"
+weight = 5
+[menus.main.params]
+icon = "fa-solid fa-circle-user"
+
+# 关联内容
+[related]
+_merge = "shallow"
+
+# 模块
+[module]
+[module.hugoVersion]
+extended = true
+min = "0.156.0"
+
+# 标记语言配置
+[markup]
+_merge = "shallow"
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+anchorLineNos = false
+guessSyntax = true
+lineNos = true
+lineNumbersInTable = true
+
+[markup.goldmark]
+duplicateResourceFiles = false
+
+[markup.goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+linkifyProtocol = 'https'
+strikethrough = false
+table = true
+taskList = true
+typographer = true
+
+[markup.goldmark.extensions.extras]
+[markup.goldmark.extensions.extras.delete]
+enable = true
+[markup.goldmark.extensions.extras.insert]
+enable = true
+[markup.goldmark.extensions.extras.mark]
+enable = true
+[markup.goldmark.extensions.extras.subscript]
+enable = true
+[markup.goldmark.extensions.extras.superscript]
+enable = true
+
+# MathJax / KaTeX 支持
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)'], ['$', '$']]
+
+[markup.goldmark.parser]
+[markup.goldmark.parser.attribute]
+block = true
+title = true
+
+[markup.goldmark.renderer]
+hardWraps = false
+unsafe = true
+xhtml = false
+
+# 网站地图
+[sitemap]
+changefreq = "weekly"
+disable = false
+filename = "sitemap.xml"
+priority = 0.5
+
+# 永久链接
+[permalinks]
+[permalinks.page]
+posts = "/p/:slugorcontentbasename"
+[permalinks.section]
+posts = "/posts"
+
+# 隐私配置
+[privacy]
+[privacy.x]
+enableDNT = true
+[privacy.youtube]
+privacyEnhanced = true
+
+# 输出格式
+[outputs]
+_merge = "shallow"
+home = ["html", "rss", "archives", "offline", "search"]
+page = ["html", "markdown"]
+section = ["html", "rss"]
+taxonomy = ["html"]
+term = ["html", "rss"]
+
+# 分类法
+[taxonomies]
+_merge = "shallow"
+category = "categories"
+tag = "tags"
+collection = "collections"
+
+# =====================================================================================
+# FixIt 主题核心配置
+# =====================================================================================
+
+[params]
+version = "0.4.X"
+description = "一个基于 Hugo FixIt 主题的个人技术博客，记录学习与生活点滴。"
+keywords = ["Hugo", "FixIt", "博客", "技术", "生活"]
+defaultTheme = "auto"
+fingerprint = "sha256"
+dateFormat = "2006-01-02"
+images = ["/images/og-image.png"]
+enablePWA = true
+capitalizeTitles = false
+externalIcon = true
+withSiteTitle = true
+titleDelimiter = "-"
+indexWithSubtitle = true
+summaryPlainify = false
+enableTranslationMerge = false
+tooltip = true
+disableThemeInject = false
+
+# 作者信息
+[params.author]
+name = "星云"
+email = "nebula@example.com"
+link = "https://github.com/nebula"
+avatar = "/images/avatar.png"
+
+# Git 信息
+[params.gitInfo]
+repo = ""
+branch = "main"
+dir = "content"
+issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
+
+# 应用图标
+[params.app]
+title = "星云笔记"
+noFavicon = false
+svgFavicon = ""
+iconColor = "#5bbad5"
+tileColor = "#da532c"
+[params.app.themeColor]
+light = "#f8f8f8"
+dark = "#252627"
+
+# 搜索配置（启用 Fuse.js）
+[params.search]
+enable = true
+type = "fuse"
+contentLength = 4000
+placeholder = "搜索文章..."
+maxResultLength = 10
+snippetLength = 30
+highlightTag = "em"
+absoluteURL = false
+anchorify = true
+
+[params.search.fuse]
+isCaseSensitive = false
+minMatchCharLength = 2
+findAllMatches = false
+location = 0
+threshold = 0.3
+distance = 100
+ignoreLocation = false
+useExtendedSearch = false
+ignoreFieldNorm = false
+
+# 头部导航
+[params.header]
+desktopMode = "sticky"
+mobileMode = "auto"
+
+[params.header.title]
+logo = ""
+name = "星云笔记"
+pre = ""
+post = ""
+typeit = true
+
+[params.header.subtitle]
+name = "记录每一个灵感的瞬间"
+typeit = true
+
+# 面包屑导航
+[params.breadcrumb]
+enable = true
+sticky = false
+showHome = true
+separator = "/"
+capitalize = false
+
+# 文章导航
+[params.navigation]
+inSection = true
+reverse = false
+
+# 页脚
+[params.footer]
+enable = true
+copyright = true
+author = true
+since = "2024"
+gov = ""
+icp = ""
+license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+
+[params.footer.powered]
+enable = true
+hugoLogo = true
+themeLogo = true
+
+[params.footer.siteTime]
+enable = true
+animate = true
+icon = "fa-solid fa-heartbeat"
+pre = "本站已运行"
+value = "2024-01-01T00:00:00+08:00"
+
+[params.footer.order]
+powered = 0
+copyright = 1
+statistics = 2
+visitor = 3
+beian = 4
+
+# 归档
+[params.archives]
+paginate = 20
+dateFormat = "01-02"
+
+# 列表页
+[params.section]
+paginate = 10
+dateFormat = "01-02"
+[params.section.feed]
+limit = -1
+fullText = false
+
+[params.list]
+paginate = 10
+dateFormat = "01-02"
+[params.list.feed]
+limit = -1
+fullText = false
+
+# 最近更新
+[params.recentlyUpdated]
+archives = true
+section = true
+list = true
+days = 30
+maxCount = 10
+
+# 标签云
+[params.tagcloud]
+enable = true
+min = 14
+max = 32
+peakCount = 10
+orderby = "name"
+
+# 首页
+[params.home]
+[params.home.profile]
+enable = true
+onlyFirstPage = true
+gravatarEmail = ""
+avatarURL = "/images/avatar.png"
+avatarMenu = ""
+title = "星云笔记"
+subtitle = "记录每一个灵感的瞬间"
+typeit = true
+social = true
+disclaimer = ""
+
+[params.home.posts]
+enable = true
+paginate = 6
+
+# 社交链接
+[params.social]
+GitHub = "nebula"
+Zhihu = ""
+Bilibili = ""
+Email = "nebula@example.com"
+RSS = true
+
+# TypeIt
+[params.typeit]
+speed = 100
+cursorSpeed = 1000
+cursorChar = "|"
+duration = -1
+loop = true
+
+# Mermaid 图表
+[params.mermaid]
+cdn = ""
+zenuml = ""
+themes = ["default", "dark"]
+securityLevel = "loose"
+look = "handDrawn"
+fontFamily = ""
+layoutLoaders = []
+layout = "dagre"
+
+# 自定义 Admonition
+[params.admonition]
+tip = "fa-regular fa-lightbulb"
+
+# 自定义任务列表
+[params.taskList]
+tip = "fa-regular fa-lightbulb"
+
+# Pangu（中文排版）
+[params.pangu]
+enable = true
+selector = "article"
+
+# 水印
+[params.watermark]
+enable = false
+content = "星云笔记"
+opacity = 0.1
+width = 150
+height = 20
+rowSpacing = 60
+colSpacing = 30
+rotate = 15
+fontSize = 0.85
+fontFamily = "inherit"
+
+# 不蒜子统计
+[params.busuanzi]
+enable = true
+source = "https://vercount.one/js"
+siteViews = true
+pageViews = true
+
+# 网站验证
+[params.verification]
+google = ""
+bing = ""
+yandex = ""
+pinterest = ""
+baidu = ""
+so = ""
+sogou = ""
+
+# SEO
+[params.seo]
+image = ""
+thumbnailUrl = ""
+
+# 分析（默认关闭）
+[params.analytics]
+enable = false
+
+# Cookie 同意
+[params.cookieconsent]
+enable = true
+[params.cookieconsent.content]
+message = ""
+dismiss = ""
+link = ""
+
+# CDN
+[params.cdn]
+data = ""
+
+# 兼容性
+[params.compatibility]
+polyfill = false
+objectFit = false
+
+# GitHub 角标
+[params.githubCorner]
+enable = false
+permalink = "https://github.com/nebula/blog"
+title = "View source on GitHub"
+position = "right"
+
+# Gravatar
+[params.gravatar]
+enable = false
+host = "www.gravatar.com"
+style = ""
+
+# 回到顶部
+[params.backToTop]
+enable = true
+scrollpercent = true
+
+# 阅读进度条
+[params.readingProgress]
+enable = true
+start = "left"
+position = "top"
+reversed = false
+light = ""
+dark = ""
+height = "2px"
+
+# 页面加载进度
+[params.pace]
+enable = false
+color = "blue"
+theme = "minimal"
+
+# PostChat AI（关闭）
+[params.postChat]
+enable = false
+
+[params.postSummary]
+enable = false
+
+[params.podcast]
+enable = false
+
+# Feed
+[params.feed]
+limit = 10
+fullText = true
+[params.feed.follow]
+feedId = ""
+userId = ""
+
+# 图片优化
+[params.image]
+cacheRemote = true
+optimise = false
+blackList = []
+
+# 代码块
+[params.codeblock]
+wrapper = true
+mode = "mac"
+wrapperClass = ""
+maxShownLines = 10
+shadow = "hover"
+copyable = true
+downloadable = true
+fullscreen = true
+lineNosToggler = true
+lineWrapToggler = true
+editable = false
+
+# JSON 查看器
+[params.jsonViewer]
+enable = true
+expandDepth = 1
+copyable = true
+sort = false
+boxed = true
+
+# 文件树
+[params.filetree]
+level = 1
+folderSlash = false
+ignoreList = []
+
+# 打印
+[params.print]
+expand_admonition = true
+expand_code = true
+expand_details = true
+expand_file_tree = false
+
+# 自定义块
+[params.customPartials]
+head = []
+menuDesktop = []
+menuMobile = []
+profile = []
+aside = []
+comment = []
+footer = []
+widgets = []
+assets = []
+postTocBefore = []
+postTocAfter = []
+postContentBefore = []
+postContentAfter = []
+postFooterBefore = []
+postFooterAfter = []
+
+# 开发选项
+[params.dev]
+enable = false
+c4u = false
+debug = false
+
+# =====================================================================================
+# 页面级配置
+# =====================================================================================
+
+[params.page]
+authorAvatar = true
+hiddenFromHomePage = false
+hiddenFromSearch = false
+hiddenFromRelated = false
+hiddenFromFeed = false
+twemoji = false
+lightgallery = true
+ruby = true
+fraction = true
+fontawesome = true
+license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+linkToMarkdown = true
+linkToSource = true
+linkToEdit = true
+linkToReport = true
+linkToVscode = false
+pageStyle = "normal"
+autoBookmark = true
+showLastmod = true
+wordCount = true
+readingTime = true
+endFlag = ""
+instantPage = true
+collectionList = false
+collectionNavigation = false
+
+[params.page.repost]
+enable = false
+url = ""
+
+# 目录
+[params.page.toc]
+enable = true
+keepStatic = false
+auto = true
+position = "right"
+ordered = false
+startLevel = 2
+endLevel = 6
+decreaseH1 = false
+
+# 过期提醒
+[params.page.expirationReminder]
+enable = true
+reminder = 90
+warning = 180
+closeComment = false
+
+# 标题
+[params.page.heading]
+capitalize = false
+[params.page.heading.number]
+enable = false
+onlyMainSection = true
+[params.page.heading.number.format]
+h1 = "{title}"
+h2 = "{h2} {title}"
+h3 = "{h2}.{h3} {title}"
+h4 = "{h2}.{h3}.{h4} {title}"
+h5 = "{h2}.{h3}.{h4}.{h5} {title}"
+h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
+
+# 数学公式
+[params.page.math]
+enable = true
+type = "katex"
+[params.page.math.katex]
+copyTex = true
+throwOnError = false
+errorColor = "#ff4949"
+[params.page.math.mathjax]
+cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+[params.page.math.mathjax.loader]
+load = ["ui/safe"]
+[params.page.math.mathjax.options]
+enableMenu = true
+skipHtmlTags = ["script", "noscript", "style", "textarea", "pre", "code", "math", "select", "option", "mjx-container"]
+ignoreHtmlClass = "mathjax_ignore"
+
+# 地图
+[params.page.mapbox]
+accessToken = ""
+lightStyle = "mapbox://styles/mapbox/light-v11"
+darkStyle = "mapbox://styles/mapbox/dark-v11"
+navigation = true
+geolocate = true
+scale = true
+fullscreen = true
+
+# 相关内容
+[params.page.related]
+enable = true
+count = 5
+position = ["aside", "footer"]
+
+# 打赏
+[params.page.reward]
+enable = false
+animation = false
+position = "after"
+mode = "static"
+[params.page.reward.ways]
+
+# 分享
+[params.page.share]
+enable = true
+Twitter = true
+Facebook = false
+Linkedin = false
+Whatsapp = false
+Pinterest = false
+Tumblr = false
+HackerNews = false
+Reddit = false
+VK = false
+Buffer = false
+Xing = false
+Line = false
+Instapaper = false
+Pocket = false
+Flipboard = false
+Weibo = true
+Myspace = false
+Blogger = false
+Baidu = false
+Odnoklassniki = false
+Evernote = false
+Skype = false
+Trello = false
+Mix = false
+
+# 评论（默认关闭）
+[params.page.comment]
+enable = false
+
+# 第三方库
+[params.page.library]
+[params.page.library.css]
+[params.page.library.js]
+
+# 页面 SEO
+[params.page.seo]
+images = []
+[params.page.seo.publisher]
+name = ""
+logoUrl = ""
