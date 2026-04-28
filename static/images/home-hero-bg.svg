@@ -1,0 +1,75 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAFBFD"/>
+      <stop offset="0.55" stop-color="#F6F8FC"/>
+      <stop offset="1" stop-color="#F3F6FB"/>
+    </linearGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" stroke="#0F172A" stroke-opacity="0.05"/>
+    </pattern>
+    <linearGradient id="beam" x1="860" y1="160" x2="1240" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#111827" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="1040" y1="120" x2="1320" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C8CFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#7C8CFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur" x="920" y="40" width="520" height="360" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="48"/>
+    </filter>
+    <radialGradient id="darkMist" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1250 610) rotate(-20) scale(320 220)">
+      <stop stop-color="#111827" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#111827" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="darkStroke" x1="1010" y1="458" x2="1370" y2="716" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="panelFade" x1="1040" y1="500" x2="1350" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" rx="36" fill="url(#bg)"/>
+  <rect width="1600" height="900" rx="36" fill="url(#grid)"/>
+
+  <g opacity="0.9">
+    <path d="M980 96H1420" stroke="#0F172A" stroke-opacity="0.06"/>
+    <path d="M980 144H1420" stroke="#0F172A" stroke-opacity="0.06"/>
+    <path d="M980 192H1420" stroke="#0F172A" stroke-opacity="0.06"/>
+    <path d="M980 240H1420" stroke="#0F172A" stroke-opacity="0.06"/>
+    <path d="M980 288H1420" stroke="#0F172A" stroke-opacity="0.06"/>
+  </g>
+
+  <g filter="url(#blur)">
+    <circle cx="1180" cy="190" r="140" fill="url(#accent)"/>
+  </g>
+
+  <path d="M942 104L1328 490" stroke="url(#beam)" stroke-width="1.5"/>
+  <path d="M1016 104L1402 490" stroke="url(#beam)" stroke-width="1.5"/>
+
+  <rect x="1010" y="116" width="364" height="214" rx="28" fill="white" fill-opacity="0.42" stroke="#0F172A" stroke-opacity="0.06"/>
+  <rect x="1060" y="166" width="118" height="10" rx="5" fill="#0F172A" fill-opacity="0.12"/>
+  <rect x="1060" y="194" width="220" height="10" rx="5" fill="#0F172A" fill-opacity="0.08"/>
+  <rect x="1060" y="222" width="176" height="10" rx="5" fill="#0F172A" fill-opacity="0.08"/>
+
+  <rect x="1128" y="580" width="256" height="120" rx="24" fill="white" fill-opacity="0.34" stroke="#0F172A" stroke-opacity="0.06"/>
+  <rect x="1160" y="616" width="136" height="10" rx="5" fill="#0F172A" fill-opacity="0.1"/>
+  <rect x="1160" y="644" width="96" height="10" rx="5" fill="#0F172A" fill-opacity="0.07"/>
+
+  <ellipse cx="1248" cy="612" rx="250" ry="164" fill="url(#darkMist)"/>
+  <rect x="1010" y="470" width="396" height="214" rx="28" fill="url(#panelFade)" stroke="url(#darkStroke)"/>
+  <rect x="1044" y="506" width="118" height="8" rx="4" fill="#0F172A" fill-opacity="0.22"/>
+  <rect x="1044" y="532" width="192" height="8" rx="4" fill="#0F172A" fill-opacity="0.1"/>
+  <rect x="1044" y="558" width="148" height="8" rx="4" fill="#0F172A" fill-opacity="0.08"/>
+  <path d="M1044 608H1368" stroke="#0F172A" stroke-opacity="0.09" stroke-width="1"/>
+  <path d="M1044 640H1368" stroke="#0F172A" stroke-opacity="0.07" stroke-width="1"/>
+  <path d="M1044 672H1306" stroke="#0F172A" stroke-opacity="0.06" stroke-width="1"/>
+
+  <circle cx="986" cy="620" r="6" fill="#7C8CFF" fill-opacity="0.38"/>
+  <circle cx="1018" cy="652" r="4" fill="#0F172A" fill-opacity="0.18"/>
+  <circle cx="958" cy="682" r="5" fill="#0F172A" fill-opacity="0.1"/>
+</svg>

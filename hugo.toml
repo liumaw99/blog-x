@@ -308,7 +308,7 @@ disableThemeInject = false
 name = "Vibely"
 email = "hello@vibely.uno"
 link = "https://github.com/liumaw99"
-avatar = "/images/avatar.svg"
+avatar = "/images/avatar/cbbd7e3bdf278af4275d0ff155e88ca6.png"
 
 # Git 信息
 [params.gitInfo]
@@ -321,7 +321,7 @@ issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0
 [params.app]
 title = "Vibely"
 noFavicon = false
-svgFavicon = ""
+svgFavicon = "/favicon.svg"
 iconColor = "#5bbad5"
 tileColor = "#da532c"
 [params.app.themeColor]
@@ -391,9 +391,9 @@ icp = ""
 license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
 
 [params.footer.powered]
-enable = true
-hugoLogo = true
-themeLogo = true
+enable = false
+hugoLogo = false
+themeLogo = false
 
 [params.footer.siteTime]
 enable = true
@@ -451,7 +451,7 @@ orderby = "name"
 enable = true
 onlyFirstPage = true
 gravatarEmail = ""
-avatarURL = "/images/avatar.svg"
+avatarURL = "/images/avatar/cbbd7e3bdf278af4275d0ff155e88ca6.png"
 avatarMenu = ""
 title = "Vibely"
 subtitle = "把技术实践、成长笔记与生活观察，写成一座可长期维护的博客。"
@@ -468,7 +468,8 @@ paginate = 8
 GitHub = "liumaw99"
 Zhihu = ""
 Bilibili = ""
-Email = "hello@vibely.uno"
+QQ = "969236713"
+Email = "liumaw99@foxmail.com"
 RSS = true
 
 # TypeIt
