@@ -32,12 +32,20 @@ quality = 75
 [menus]
 
 [[menus.main]]
+identifier = "home"
+name = "首页"
+url = "/"
+weight = -1
+[menus.main.params]
+icon = "fa-regular fa-house"
+
+[[menus.main]]
 identifier = "tech"
 name = "技术"
 url = "/tech/"
 weight = 1
 [menus.main.params]
-icon = "fa-solid fa-code"
+icon = "fa-regular fa-lightbulb"
 
 [[menus.main]]
 identifier = "life"
@@ -45,7 +53,7 @@ name = "生活"
 url = "/life/"
 weight = 2
 [menus.main.params]
-icon = "fa-solid fa-mug-hot"
+icon = "fa-regular fa-compass"
 
 [[menus.main]]
 identifier = "notes"
@@ -53,7 +61,7 @@ name = "笔记"
 url = "/notes/"
 weight = 3
 [menus.main.params]
-icon = "fa-solid fa-pen-nib"
+icon = "fa-regular fa-pen-to-square"
 
 [[menus.main]]
 identifier = "categories"
@@ -61,7 +69,7 @@ name = "分类"
 url = "/categories/"
 weight = 4
 [menus.main.params]
-icon = "fa-solid fa-folder-tree"
+icon = "fa-regular fa-folder"
 
 [[menus.main]]
 identifier = "tags"
@@ -69,7 +77,7 @@ name = "标签"
 url = "/tags/"
 weight = 5
 [menus.main.params]
-icon = "fa-solid fa-tags"
+icon = "fa-regular fa-bookmark"
 
 [[menus.main]]
 identifier = "archives"
@@ -77,7 +85,7 @@ name = "归档"
 url = "/archives/"
 weight = 6
 [menus.main.params]
-icon = "fa-solid fa-archive"
+icon = "fa-regular fa-folder-open"
 
 [[menus.main]]
 identifier = "about"
@@ -85,7 +93,7 @@ name = "关于"
 url = "/about/"
 weight = 7
 [menus.main.params]
-icon = "fa-solid fa-circle-user"
+icon = "fa-regular fa-circle-user"
 
 # 关联内容
 [related]
@@ -303,14 +311,14 @@ icp = ""
 license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
 
 [params.footer.powered]
-enable = true
-hugoLogo = true
-themeLogo = true
+enable = false
+hugoLogo = false
+themeLogo = false
 
 [params.footer.siteTime]
 enable = true
 animate = true
-icon = "fa-solid fa-heartbeat"
+icon = "fa-regular fa-heart"
 pre = "本站已运行"
 value = "2024-01-01T00:00:00+08:00"
 
