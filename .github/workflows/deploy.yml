@@ -25,10 +25,19 @@ jobs:
 
       - name: Install ossutil
         run: |
-          wget -q https://gosspublic.alicdn.com/ossutil/1.7.19/ossutil64
+          wget -q https://gosspublic.alicdn.com/ossutil/1.7.18/ossutil64
           chmod +x ossutil64
-          ./ossutil64 config -e ${{ secrets.OSS_ENDPOINT }} -i ${{ secrets.OSS_ACCESS_KEY_ID }} -k ${{ secrets.OSS_ACCESS_KEY_SECRET }} -L CH
+
+      - name: Clear old files
+        run: |
+          ./ossutil64 -e ${{ secrets.OSS_ENDPOINT }} \
+                      -i ${{ secrets.OSS_ACCESS_KEY_ID }} \
+                      -k ${{ secrets.OSS_ACCESS_KEY_SECRET }} \
+                      rm -r -f oss://${{ secrets.OSS_BUCKET }}/
 
       - name: Deploy to OSS
         run: |
-          ./ossutil64 cp -r -f public/ oss://${{ secrets.OSS_BUCKET }}/
+          ./ossutil64 -e ${{ secrets.OSS_ENDPOINT }} \
+                      -i ${{ secrets.OSS_ACCESS_KEY_ID }} \
+                      -k ${{ secrets.OSS_ACCESS_KEY_SECRET }} \
+                      cp -r -f public/ oss://${{ secrets.OSS_BUCKET }}/
