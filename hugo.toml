@@ -183,7 +183,7 @@ keywords = ["Hugo", "FixIt", "博客", "技术", "生活"]
 defaultTheme = "auto"
 fingerprint = "sha256"
 dateFormat = "2006-01-02"
-images = ["/images/og-image.png"]
+images = ["/images/og-image.svg"]
 enablePWA = true
 capitalizeTitles = false
 externalIcon = true
@@ -200,7 +200,7 @@ disableThemeInject = false
 name = "星云"
 email = "nebula@example.com"
 link = "https://github.com/nebula"
-avatar = "/images/avatar.png"
+avatar = "/images/avatar.svg"
 
 # Git 信息
 [params.gitInfo]
@@ -343,7 +343,7 @@ orderby = "name"
 enable = true
 onlyFirstPage = true
 gravatarEmail = ""
-avatarURL = "/images/avatar.png"
+avatarURL = "/images/avatar.svg"
 avatarMenu = ""
 title = "星云笔记"
 subtitle = "记录每一个灵感的瞬间"
