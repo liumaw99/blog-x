@@ -141,3 +141,20 @@ header {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--fi-scrollbar-hover-color);
 }
+
+// 文章内图片默认限制显示尺寸，点击 lightgallery 后可看原图
+.content {
+  figure,
+  p {
+    img {
+      max-width: 420px;
+      max-height: 560px;
+      width: auto;
+      height: auto;
+      margin: 1rem auto;
+      display: block;
+      cursor: zoom-in;
+    }
+  }
+}
+
