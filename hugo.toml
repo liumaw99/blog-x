@@ -481,7 +481,7 @@ objectFit = false
 
 # GitHub 角标
 [params.githubCorner]
-enable = false
+enable = true
 permalink = "https://github.com/nebula/blog"
 title = "View source on GitHub"
 position = "right"
@@ -509,7 +509,7 @@ height = "2px"
 
 # 页面加载进度
 [params.pace]
-enable = false
+enable = true
 color = "blue"
 theme = "minimal"
 
@@ -617,7 +617,7 @@ linkToSource = true
 linkToEdit = true
 linkToReport = true
 linkToVscode = false
-pageStyle = "normal"
+pageStyle = "wide"
 autoBookmark = true
 showLastmod = true
 wordCount = true

@@ -11,5 +11,4 @@ $global-font-family: 'LXGW WenKai', 'PingFang SC', 'Microsoft YaHei', sans-serif
 // 代码字体
 $code-font-family: 'Fira Code', 'SF Mono', 'Source Code Pro', monospace;
 
-// 页面宽度 — 使用 wide 模式
-// $page-style: 'wide';
+// 页面宽度 — 在 hugo.toml 中通过 pageStyle = "wide" 配置

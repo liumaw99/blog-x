@@ -2,22 +2,6 @@
 // 自定义样式
 // =============================================================================
 
-// 自定义页面宽度（可选，与 _override.scss 配合使用）
-[data-page-style='custom'] {
-  %page-style {
-    @include media('xl') {
-      width: ROUND(72%, 2px);
-      max-width: 1600px;
-    }
-    @include media('lg') {
-      width: ROUND(64%, 2px);
-    }
-    @include media('md') {
-      width: ROUND(60%, 2px);
-    }
-  }
-}
-
 // 自定义 Admonition 颜色
 $custom-admonition-map: (
   tip: (
@@ -147,14 +131,29 @@ header {
   figure,
   p {
     img {
-      max-width: 420px;
-      max-height: 560px;
+      max-width: 720px;
+      max-height: 640px;
       width: auto;
       height: auto;
-      margin: 1rem auto;
+      margin: 1.25rem auto;
       display: block;
       cursor: zoom-in;
+      border-radius: 6px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      transition: box-shadow 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
     }
   }
+}
+
+// 图片标题样式优化
+.content .image-caption {
+  font-size: 0.85rem;
+  color: var(--fi-secondary-color);
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
 }
 
