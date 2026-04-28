@@ -1,0 +1,14 @@
+- nickname: "FixIt"
+  avatar: "https://fixit.lruihao.cn/images/hugo-fixit.webp"
+  url: "https://fixit.lruihao.cn/"
+  description: "Hugo FixIt 主题官方文档与生态入口。"
+
+- nickname: "Hugo"
+  avatar: "/images/og-image.svg"
+  url: "https://gohugo.io/"
+  description: "快速、现代、可维护的静态站点生成器。"
+
+- nickname: "Lruihao"
+  avatar: "https://github.com/Lruihao.png"
+  url: "https://lruihao.cn/"
+  description: "FixIt 作者的个人博客，适合作为内容组织与主题能力参考。"

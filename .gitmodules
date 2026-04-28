@@ -1,3 +1,9 @@
 [submodule "themes/FixIt"]
 	path = themes/FixIt
 	url = https://github.com/hugo-fixit/FixIt.git
+[submodule "themes/component-projects"]
+	path = themes/component-projects
+	url = https://github.com/hugo-fixit/component-projects.git
+[submodule "themes/cmpt-post-preview"]
+	path = themes/cmpt-post-preview
+	url = https://github.com/Artexxx/cmpt-post-preview.git

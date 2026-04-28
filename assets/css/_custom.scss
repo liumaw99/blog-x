@@ -17,6 +17,31 @@ li[data-task='tip'] {
   --fi-checkbox-color: #EA9E36;
 }
 
+// PC 端宽度优化：减少两侧留白，但保持原生 wide 风格
+.wrapper[data-page-style='wide'] {
+  main.fi-container {
+    @include media('xl') {
+      gap: 0.9rem;
+      padding-inline: 1.2rem;
+    }
+
+    > article.page.single,
+    > article.page.archive,
+    > .page.home.posts,
+    > .page.archive {
+      @include media('xl') {
+        max-width: 1360px;
+      }
+    }
+
+    > aside {
+      @include media('xl') {
+        max-width: 300px;
+      }
+    }
+  }
+}
+
 // 首页 Profile 区域微调
 .home-profile {
   .home-avatar {
@@ -41,6 +66,23 @@ li[data-task='tip'] {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   }
 }
+
+.home-profile {
+  padding: 2.2rem 1rem 1.25rem;
+
+  .home-subtitle {
+    max-width: 42rem;
+    margin-inline: auto;
+    color: var(--fi-secondary-color);
+    line-height: 1.8;
+  }
+}
+
+.home.posts .summary,
+.page.archive {
+  border-radius: 1rem;
+}
+
 
 // 顶部导航栏毛玻璃效果
 header {
@@ -69,10 +111,25 @@ header {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   background-color: rgba(255, 255, 255, 0.85) !important;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(120, 130, 150, 0.12);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 
   [data-theme=dark] & {
     background-color: rgba(37, 38, 39, 0.85) !important;
   }
+}
+
+.sub-menu .menu-link {
+  white-space: nowrap;
+}
+
+.fixit-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.35rem;
+  vertical-align: -0.16rem;
+  border-radius: 50%;
 }
 
 // 移动端菜单毛玻璃
@@ -157,3 +214,40 @@ header {
   margin-bottom: 0.5rem;
 }
 
+.friend-links {
+  gap: 1rem;
+}
+
+.friend-link {
+  border-radius: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  }
+}
+
+// hover 文章预览浮层尺寸微调，贴近 hugo-blog 观感
+.pp-box {
+  width: 520px;
+  max-width: calc(100vw - 24px);
+  height: 36vh;
+  max-height: 760px;
+  min-width: 360px;
+  min-height: 280px;
+  border-radius: 16px;
+}
+
+.taxonomy-cards .card-item {
+  .more-post {
+    margin-top: 0.5rem;
+  }
+
+  .more-single-link {
+    font-weight: 600;
+  }
+}
+
+[data-theme='dark'] {
+}

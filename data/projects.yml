@@ -1,0 +1,32 @@
+- title: 核心依赖
+  description: 这些项目直接构成了 Vibely 的站点基础设施与内容体验。
+  contentAdapters: false
+  params:
+    hiddenFromHomePage: true
+  categories:
+    - infrastructure
+  collections:
+    - stack
+  totalStars: true
+  orderby: star
+  order: desc
+  repos:
+    - gohugoio/hugo
+    - hugo-fixit/FixIt
+    - krisk/Fuse
+
+- title: 持续关注
+  description: 用于学习现代 Web、工程化与内容产品思路的开源项目。
+  contentAdapters: false
+  params:
+    hiddenFromHomePage: true
+  categories:
+    - learning
+  collections:
+    - watchlist
+  totalStars: false
+  orderby: star
+  order: desc
+  repos:
+    - vercel/next.js
+    - golang/go

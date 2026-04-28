@@ -16,7 +16,7 @@ enableEmoji = true
 mainSections = ["tech", "life", "notes"]
 
 # 主题
-theme = ["FixIt"]
+theme = ["FixIt", "component-projects", "cmpt-post-preview"]
 
 # Front Matter
 [frontmatter]
@@ -41,6 +41,7 @@ icon = "fa-regular fa-house"
 
 [[menus.main]]
 identifier = "tech"
+parent = "articles"
 name = "技术"
 url = "/tech/"
 weight = 1
@@ -49,6 +50,7 @@ icon = "fa-regular fa-lightbulb"
 
 [[menus.main]]
 identifier = "life"
+parent = "articles"
 name = "生活"
 url = "/life/"
 weight = 2
@@ -57,6 +59,7 @@ icon = "fa-regular fa-compass"
 
 [[menus.main]]
 identifier = "notes"
+parent = "articles"
 name = "笔记"
 url = "/notes/"
 weight = 3
@@ -64,7 +67,16 @@ weight = 3
 icon = "fa-regular fa-pen-to-square"
 
 [[menus.main]]
+identifier = "articles"
+name = "文章"
+url = "/archives/"
+weight = 1
+[menus.main.params]
+icon = "fa-solid fa-feather"
+
+[[menus.main]]
 identifier = "categories"
+parent = "articles"
 name = "分类"
 url = "/categories/"
 weight = 4
@@ -73,6 +85,7 @@ icon = "fa-regular fa-folder"
 
 [[menus.main]]
 identifier = "tags"
+parent = "articles"
 name = "标签"
 url = "/tags/"
 weight = 5
@@ -81,6 +94,7 @@ icon = "fa-regular fa-bookmark"
 
 [[menus.main]]
 identifier = "archives"
+parent = "articles"
 name = "归档"
 url = "/archives/"
 weight = 6
@@ -88,12 +102,78 @@ weight = 6
 icon = "fa-regular fa-folder-open"
 
 [[menus.main]]
-identifier = "about"
-name = "关于"
-url = "/about/"
+identifier = "collections"
+parent = "articles"
+name = "合集"
+url = "/collections/"
 weight = 7
 [menus.main.params]
+icon = "fa-solid fa-layer-group"
+
+[[menus.main]]
+identifier = "fixit"
+parent = "articles"
+pre = '<img class="fixit-icon" src="https://fixit.lruihao.cn/images/hugo-fixit.webp" alt="FixIt logo">'
+post = '<i class="fa-solid fa-arrow-up-right-from-square fa-xs text-secondary"></i>'
+name = "FixIt"
+url = "https://fixit.lruihao.cn/"
+title = "FixIt 官网"
+weight = 8
+[menus.main.params]
+divided = true
+
+[[menus.main]]
+identifier = "about"
+parent = "more"
+name = "关于"
+url = "/about/"
+weight = 1
+[menus.main.params]
 icon = "fa-regular fa-circle-user"
+
+[[menus.main]]
+identifier = "projects"
+parent = "more"
+name = "开源"
+url = "/projects/"
+weight = 2
+[menus.main.params]
+icon = "fa-solid fa-diagram-project"
+
+[[menus.main]]
+identifier = "friends"
+parent = "more"
+name = "友链"
+url = "/friends/"
+weight = 3
+[menus.main.params]
+icon = "fa-regular fa-handshake"
+
+[[menus.main]]
+identifier = "guestbook"
+parent = "more"
+name = "留言"
+url = "/guestbook/"
+weight = 4
+[menus.main.params]
+icon = "fa-regular fa-comments"
+
+[[menus.main]]
+identifier = "rss"
+parent = "more"
+name = "RSS"
+url = "/index.xml"
+weight = 5
+[menus.main.params]
+icon = "fa-solid fa-rss"
+
+[[menus.main]]
+identifier = "more"
+name = "更多"
+url = ""
+weight = 2
+[menus.main.params]
+icon = "fa-solid fa-ellipsis"
 
 # 关联内容
 [related]
@@ -206,8 +286,8 @@ collection = "collections"
 
 [params]
 version = "0.4.X"
-description = "一个基于 Hugo FixIt 主题的个人技术博客，记录学习与生活点滴。"
-keywords = ["Hugo", "FixIt", "博客", "技术", "生活"]
+description = "Vibely 的数字花园，记录技术实践、学习笔记与生活观察。"
+keywords = ["Vibely", "Hugo", "FixIt", "技术博客", "学习笔记", "生活随笔"]
 defaultTheme = "auto"
 fingerprint = "sha256"
 dateFormat = "2006-01-02"
@@ -226,13 +306,13 @@ disableThemeInject = false
 # 作者信息
 [params.author]
 name = "Vibely"
-email = "nebula@example.com"
-link = "https://github.com/nebula"
+email = "hello@vibely.uno"
+link = "https://github.com/liumaw99"
 avatar = "/images/avatar.svg"
 
 # Git 信息
 [params.gitInfo]
-repo = ""
+repo = "https://github.com/liumaw99/blog-x"
 branch = "main"
 dir = "content"
 issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
@@ -253,9 +333,9 @@ dark = "#252627"
 enable = true
 type = "fuse"
 contentLength = 4000
-placeholder = "搜索文章..."
+placeholder = "搜索文章、笔记与关键词..."
 maxResultLength = 10
-snippetLength = 30
+snippetLength = 50
 highlightTag = "em"
 absoluteURL = false
 anchorify = true
@@ -284,7 +364,7 @@ post = ""
 typeit = false
 
 [params.header.subtitle]
-name = "Feel the Vibe"
+name = "技术、笔记与生活的共振"
 typeit = false
 
 # 面包屑导航
@@ -311,9 +391,9 @@ icp = ""
 license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
 
 [params.footer.powered]
-enable = false
-hugoLogo = false
-themeLogo = false
+enable = true
+hugoLogo = true
+themeLogo = true
 
 [params.footer.siteTime]
 enable = true
@@ -336,14 +416,14 @@ dateFormat = "01-02"
 
 # 列表页
 [params.section]
-paginate = 10
+paginate = 12
 dateFormat = "01-02"
 [params.section.feed]
 limit = -1
 fullText = false
 
 [params.list]
-paginate = 10
+paginate = 12
 dateFormat = "01-02"
 [params.list.feed]
 limit = -1
@@ -374,21 +454,21 @@ gravatarEmail = ""
 avatarURL = "/images/avatar.svg"
 avatarMenu = ""
 title = "Vibely"
-subtitle = "Feel the Vibe"
+subtitle = "把技术实践、成长笔记与生活观察，写成一座可长期维护的博客。"
 typeit = true
 social = true
 disclaimer = ""
 
 [params.home.posts]
 enable = true
-paginate = 6
+paginate = 8
 
 # 社交链接
 [params.social]
-GitHub = "nebula"
+GitHub = "liumaw99"
 Zhihu = ""
 Bilibili = ""
-Email = "nebula@example.com"
+Email = "hello@vibely.uno"
 RSS = true
 
 # TypeIt
@@ -398,6 +478,17 @@ cursorSpeed = 1000
 cursorChar = "|"
 duration = -1
 loop = true
+
+[params.postPreview]
+enable = true
+debug = false
+mobileBp = 900
+disableOnHome = false
+excludeSelector = ""
+showDelay = 90
+hideDelay = 260
+cropTopPx = 60
+tippyFromCdn = true
 
 # Mermaid 图表
 [params.mermaid]
@@ -482,8 +573,8 @@ objectFit = false
 # GitHub 角标
 [params.githubCorner]
 enable = true
-permalink = "https://github.com/nebula/blog"
-title = "View source on GitHub"
+permalink = "https://github.com/liumaw99/blog-x"
+title = "在 GitHub 上查看本站源码"
 position = "right"
 
 # Gravatar
@@ -574,7 +665,7 @@ expand_file_tree = false
 
 # 自定义块
 [params.customPartials]
-head = []
+head = ["inject/cmpt-post-preview.html"]
 menuDesktop = []
 menuMobile = []
 profile = []
@@ -582,7 +673,7 @@ aside = []
 comment = []
 footer = []
 widgets = []
-assets = []
+assets = ["inject/component-projects.html"]
 postTocBefore = []
 postTocAfter = []
 postContentBefore = []
@@ -622,10 +713,10 @@ autoBookmark = true
 showLastmod = true
 wordCount = true
 readingTime = true
-endFlag = ""
+endFlag = "感谢读到这里，若本文对你有帮助，欢迎继续逛逛本站的合集、标签与项目页。"
 instantPage = true
-collectionList = false
-collectionNavigation = false
+collectionList = true
+collectionNavigation = true
 
 [params.page.repost]
 enable = false
@@ -637,10 +728,10 @@ enable = true
 keepStatic = false
 auto = true
 position = "right"
-ordered = false
+ordered = true
 startLevel = 2
 endLevel = 6
-decreaseH1 = false
+decreaseH1 = true
 
 # 过期提醒
 [params.page.expirationReminder]
@@ -698,11 +789,13 @@ position = ["aside", "footer"]
 
 # 打赏
 [params.page.reward]
-enable = false
-animation = false
-position = "after"
+enable = true
+animation = true
+position = "before"
 mode = "static"
 [params.page.reward.ways]
+wechatpay = "/images/avatar.svg"
+alipay = "/images/og-image.svg"
 
 # 分享
 [params.page.share]
@@ -734,7 +827,25 @@ Mix = false
 
 # 评论（默认关闭）
 [params.page.comment]
-enable = false
+enable = true
+
+[params.page.comment.giscus]
+enable = true
+repo = "liumaw99/blog-x"
+repoId = "R_kgDOSOrdZA"
+category = "General"
+categoryId = "DIC_kwDOSOrdZM4C7528"
+mapping = "pathname"
+origin = "https://giscus.app"
+strict = "0"
+term = ""
+reactionsEnabled = "1"
+emitMetadata = "0"
+inputPosition = "bottom"
+lang = "zh-CN"
+lightTheme = "preferred_color_scheme"
+darkTheme = "preferred_color_scheme"
+lazyLoad = true
 
 # 第三方库
 [params.page.library]
