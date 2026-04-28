@@ -1,4 +1,4 @@
-# AGENTS.md — 星云笔记 (Hugo FixIt 博客)
+# AGENTS.md — Vibely (Hugo FixIt 博客)
 
 > 本文件面向 AI 编码助手。如果你不了解本项目，请先阅读此文件。
 
@@ -6,11 +6,11 @@
 
 ## 项目概述
 
-**星云笔记** 是一个基于 [Hugo](https://gohugo.io/) 静态站点生成器构建的个人博客，使用 [FixIt](https://github.com/hugo-fixit/FixIt) 主题。博客主要记录技术学习心得与生活感悟，面向中文读者。
+**Vibely** 是一个基于 [Hugo](https://gohugo.io/) 静态站点生成器构建的个人博客，使用 [FixIt](https://github.com/hugo-fixit/FixIt) 主题。博客主要记录技术学习心得与生活感悟，面向中文读者。
 
-- **站点名称**: 星云笔记
+- **站点名称**: Vibely
 - **默认语言**: 简体中文 (`zh-cn`)
-- **作者**: 星云
+- **作者**: Vibely
 - **主题**: FixIt (通过 Git 子模块引入)
 - **Hugo 最低版本**: Extended 0.156.0
 
@@ -85,7 +85,7 @@
 title: "{{ replace .File.ContentBaseName \"-\" \" \" | title }}"
 date: {{ .Date }}
 draft: true
-author: "星云"
+author: "Vibely"
 description: ""
 images: []
 tags: []
@@ -132,7 +132,7 @@ rm -rf public/ resources/
 
 ### Markdown 内容规范
 
-1. **Front Matter**: 所有文章必须包含完整的前置元数据，author 固定为 `"星云"`。
+1. **Front Matter**: 所有文章必须包含完整的前置元数据，author 固定为 `"Vibely"`。
 2. **图片路径**: 使用绝对路径 `/images/...`，图片文件存放在 `static/images/`。
 3. **分类体系**:
    - `tags` — 标签（可多个）

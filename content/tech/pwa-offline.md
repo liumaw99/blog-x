@@ -2,7 +2,7 @@
 title: "为博客启用 PWA 离线访问"
 date: 2024-05-18T11:00:00+08:00
 draft: false
-author: "星云"
+author: "Vibely"
 description: "介绍如何为 Hugo FixIt 博客配置 PWA 支持，实现离线访问、添加到主屏幕等原生应用体验。"
 images: ["/images/posts/pwa-cover.png"]
 tags: ["PWA", "离线访问", "Web App"]
@@ -37,7 +37,7 @@ enablePWA = true
 
 ```toml
 [params.app]
-title = "星云笔记"
+title = "Vibely"
 noFavicon = false
 svgFavicon = "/favicon.svg"
 iconColor = "#5bbad5"

@@ -2,7 +2,7 @@
 title: "个人简历"
 date: 2025-01-01T00:00:00+08:00
 draft: false
-author: "星云"
+author: "Vibely"
 description: "王海伟 - 前端开发工程师个人简历"
 images: []
 tags: ["简历", "前端"]

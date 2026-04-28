@@ -2,19 +2,19 @@
 title: "关于"
 date: 2024-01-01T00:00:00+08:00
 draft: false
-author: "星云"
+author: "Vibely"
 comment: false
 ---
 
 ## 关于我
 
-你好，我是 **星云**，一名热爱技术的开发者。这个博客是我记录学习心得、技术探索和生活感悟的地方。
+你好，我是 **Vibely**，一名热爱创造与探索的开发者。这里是我记录技术折腾、生活灵感和各种奇思妙想的空间。
 
-> 「代码是诗，技术是远方。」
+> 「保持好奇，感受共鸣。」
 
 ## 关于本站
 
-**星云笔记** 是一个基于 [Hugo](https://gohugo.io/) 和 [FixIt](https://github.com/hugo-fixit/FixIt) 主题构建的静态博客。它具备以下特性：
+**Vibely** 是一个基于 [Hugo](https://gohugo.io/) 和 [FixIt](https://github.com/hugo-fixit/FixIt) 主题构建的静态博客。它具备以下特性：
 
 - ⚡ **极速访问** — 静态生成，全球 CDN 加速
 - 🌙 **深色模式** — 支持自动/手动切换浅色/深色主题
@@ -27,7 +27,7 @@ comment: false
 
 ## 联系方式
 
-- GitHub: [nebula](https://github.com/nebula)
-- 邮箱: nebula@example.com
+- GitHub: [vibely](https://github.com/vibely)
+- 邮箱: hello@vibely.uno
 
 欢迎交流讨论！

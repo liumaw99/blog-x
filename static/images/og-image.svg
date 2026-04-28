@@ -6,6 +6,6 @@
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <text x="600" y="280" font-family="system-ui, sans-serif" font-size="80" font-weight="bold" fill="#fff" text-anchor="middle">星云笔记</text>
-  <text x="600" y="380" font-family="system-ui, sans-serif" font-size="36" fill="#fff" text-anchor="middle" opacity="0.9">记录每一个灵感的瞬间</text>
+  <text x="600" y="280" font-family="system-ui, sans-serif" font-size="80" font-weight="bold" fill="#fff" text-anchor="middle">Vibely</text>
+  <text x="600" y="380" font-family="system-ui, sans-serif" font-size="36" fill="#fff" text-anchor="middle" opacity="0.9">Feel the Vibe</text>
 </svg>

@@ -2,7 +2,7 @@
 title: "FixIt 高级 Markdown 扩展特性"
 date: 2024-04-05T16:30:00+08:00
 draft: false
-author: "星云"
+author: "Vibely"
 description: "探索 FixIt 主题提供的高级 Markdown 扩展，包括 Admonition、任务列表、内容加密、脚注等。"
 images: ["/images/posts/advanced-markdown-cover.png"]
 tags: ["Markdown", "FixIt", "排版"]

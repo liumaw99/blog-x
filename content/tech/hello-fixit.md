@@ -2,7 +2,7 @@
 title: "Hello FixIt：搭建我的全新博客"
 date: 2024-01-15T10:30:00+08:00
 draft: false
-author: "星云"
+author: "Vibely"
 description: "记录使用 Hugo FixIt 主题搭建个人博客的全过程，包括主题安装、配置优化和内容管理。"
 images: ["/images/posts/hello-fixit-cover.png"]
 tags: ["Hugo", "FixIt", "博客搭建"]

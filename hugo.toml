@@ -3,8 +3,8 @@
 # =====================================================================================
 
 # 站点基础信息
-title = "星云笔记"
-baseURL = "https://whw-cn.oss-cn-hangzhou.aliyuncs.com"
+title = "Vibely"
+baseURL = "https://vibely.uno"
 defaultContentLanguage = "zh-cn"
 languageCode = "zh-CN"
 languageName = "简体中文"
@@ -225,7 +225,7 @@ disableThemeInject = false
 
 # 作者信息
 [params.author]
-name = "星云"
+name = "Vibely"
 email = "nebula@example.com"
 link = "https://github.com/nebula"
 avatar = "/images/avatar.svg"
@@ -239,7 +239,7 @@ issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0
 
 # 应用图标
 [params.app]
-title = "星云笔记"
+title = "Vibely"
 noFavicon = false
 svgFavicon = ""
 iconColor = "#5bbad5"
@@ -278,14 +278,14 @@ mobileMode = "auto"
 
 [params.header.title]
 logo = ""
-name = "星云笔记"
+name = "Vibely"
 pre = ""
 post = ""
-typeit = true
+typeit = false
 
 [params.header.subtitle]
-name = "记录每一个灵感的瞬间"
-typeit = true
+name = "Feel the Vibe"
+typeit = false
 
 # 面包屑导航
 [params.breadcrumb]
@@ -373,8 +373,8 @@ onlyFirstPage = true
 gravatarEmail = ""
 avatarURL = "/images/avatar.svg"
 avatarMenu = ""
-title = "星云笔记"
-subtitle = "记录每一个灵感的瞬间"
+title = "Vibely"
+subtitle = "Feel the Vibe"
 typeit = true
 social = true
 disclaimer = ""
@@ -426,7 +426,7 @@ selector = "article"
 # 水印
 [params.watermark]
 enable = false
-content = "星云笔记"
+content = "Vibely"
 opacity = 0.1
 width = 150
 height = 20

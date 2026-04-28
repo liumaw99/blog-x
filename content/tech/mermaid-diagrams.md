@@ -2,7 +2,7 @@
 title: "使用 Mermaid 绘制流程图与图表"
 date: 2024-03-10T09:00:00+08:00
 draft: false
-author: "星云"
+author: "Vibely"
 description: "详细介绍如何在 FixIt 博客中使用 Mermaid 语法绘制流程图、时序图、类图等各种图表。"
 images: ["/images/posts/mermaid-cover.png"]
 tags: ["Mermaid", "图表", "可视化"]

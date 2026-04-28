@@ -2,7 +2,7 @@
 title: "在博客中优雅地书写数学公式"
 date: 2024-02-20T14:00:00+08:00
 draft: false
-author: "星云"
+author: "Vibely"
 description: "介绍如何在 FixIt 博客中使用 KaTeX 和 MathJax 渲染数学公式，包括行内公式和块级公式。"
 images: ["/images/posts/math-cover.png"]
 tags: ["数学", "KaTeX", "LaTeX"]

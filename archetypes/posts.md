@@ -2,7 +2,7 @@
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-author: "星云"
+author: "Vibely"
 description: ""
 images: []
 tags: []
