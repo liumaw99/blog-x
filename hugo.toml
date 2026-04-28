@@ -13,7 +13,7 @@ copyright = ""
 enableRobotsTXT = true
 enableGitInfo = true
 enableEmoji = true
-mainSections = ["posts"]
+mainSections = ["tech", "life", "notes"]
 
 # 主题
 theme = ["FixIt"]
@@ -32,18 +32,34 @@ quality = 75
 [menus]
 
 [[menus.main]]
-identifier = "posts"
-name = "文章"
-url = "/posts/"
+identifier = "tech"
+name = "技术"
+url = "/tech/"
 weight = 1
 [menus.main.params]
-icon = "fa-solid fa-book-open"
+icon = "fa-solid fa-code"
+
+[[menus.main]]
+identifier = "life"
+name = "生活"
+url = "/life/"
+weight = 2
+[menus.main.params]
+icon = "fa-solid fa-mug-hot"
+
+[[menus.main]]
+identifier = "notes"
+name = "笔记"
+url = "/notes/"
+weight = 3
+[menus.main.params]
+icon = "fa-solid fa-pen-nib"
 
 [[menus.main]]
 identifier = "categories"
 name = "分类"
 url = "/categories/"
-weight = 2
+weight = 4
 [menus.main.params]
 icon = "fa-solid fa-folder-tree"
 
@@ -51,7 +67,7 @@ icon = "fa-solid fa-folder-tree"
 identifier = "tags"
 name = "标签"
 url = "/tags/"
-weight = 3
+weight = 5
 [menus.main.params]
 icon = "fa-solid fa-tags"
 
@@ -59,7 +75,7 @@ icon = "fa-solid fa-tags"
 identifier = "archives"
 name = "归档"
 url = "/archives/"
-weight = 4
+weight = 6
 [menus.main.params]
 icon = "fa-solid fa-archive"
 
@@ -67,7 +83,7 @@ icon = "fa-solid fa-archive"
 identifier = "about"
 name = "关于"
 url = "/about/"
-weight = 5
+weight = 7
 [menus.main.params]
 icon = "fa-solid fa-circle-user"
 
@@ -145,9 +161,13 @@ priority = 0.5
 # 永久链接
 [permalinks]
 [permalinks.page]
-posts = "/p/:slugorcontentbasename"
+tech = "/:section/:slugorcontentbasename"
+life = "/:section/:slugorcontentbasename"
+notes = "/:section/:slugorcontentbasename"
 [permalinks.section]
-posts = "/posts"
+tech = "/tech"
+life = "/life"
+notes = "/notes"
 
 # 隐私配置
 [privacy]
