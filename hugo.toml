@@ -4,7 +4,7 @@
 
 # 站点基础信息
 title = "星云笔记"
-baseURL = "https://example.com"
+baseURL = "https://whw-cn.oss-cn-hangzhou.aliyuncs.com"
 defaultContentLanguage = "zh-cn"
 languageCode = "zh-CN"
 languageName = "简体中文"
