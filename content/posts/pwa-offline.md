@@ -84,13 +84,13 @@ Service Worker 充当浏览器与网络之间的代理：
 
 在 Chrome/Edge 浏览器中，地址栏右侧会出现安装图标：
 
-![安装提示](https://fixit.lruihao.cn/images/pwa-install-desktop.png "桌面安装提示")
+<!-- 桌面安装提示图片 -->
 
 ### 移动端
 
 在 Safari（iOS）或 Chrome（Android）中，可以通过"分享到主屏幕"功能安装：
 
-![iOS 安装](https://fixit.lruihao.cn/images/pwa-install-ios.png "iOS 安装步骤")
+<!-- iOS 安装步骤图片 -->
 
 ## 性能优化建议
 
@@ -137,4 +137,4 @@ Cache-Control = 'public, max-age=31536000'
 
 ---
 
-*本文最后更新于 {{< lastmod >}}*
+*本文最后更新于页面底部显示的时间戳*
