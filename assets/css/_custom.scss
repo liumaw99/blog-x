@@ -58,6 +58,71 @@ li[data-task='tip'] {
   }
 }
 
+// 顶部导航栏毛玻璃效果
+header {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.72) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  [data-theme=dark] & {
+    background-color: rgba(30, 31, 32, 0.72) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+// 桌面端 sticky 模式下增强效果
+#header-desktop {
+  &[data-header-desktop='sticky'] {
+    header {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+// 子菜单毛玻璃
+.sub-menu {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.85) !important;
+
+  [data-theme=dark] & {
+    background-color: rgba(37, 38, 39, 0.85) !important;
+  }
+}
+
+// 移动端菜单毛玻璃
+#header-mobile .menu {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.85) !important;
+
+  [data-theme=dark] & {
+    background-color: rgba(37, 38, 39, 0.85) !important;
+  }
+}
+
+// 搜索下拉毛玻璃
+.search-dropdown {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.85) !important;
+
+  [data-theme=dark] & {
+    background-color: rgba(37, 38, 39, 0.85) !important;
+  }
+
+  .dropdown-menu {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.9) !important;
+
+    [data-theme=dark] & {
+      background-color: rgba(37, 38, 39, 0.9) !important;
+    }
+  }
+}
+
 // 自定义滚动条（WebKit）
 ::-webkit-scrollbar {
   width: 8px;
