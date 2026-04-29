@@ -116,7 +116,7 @@ parent = "articles"
 pre = '<img class="fixit-icon" src="https://fixit.lruihao.cn/images/hugo-fixit.webp" alt="FixIt logo">'
 post = '<i class="fa-solid fa-arrow-up-right-from-square fa-xs text-secondary"></i>'
 name = "FixIt"
-url = "https://fixit.lruihao.cn/"
+ url = ""
 title = "FixIt 官网"
 weight = 8
 [menus.main.params]
