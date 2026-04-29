@@ -364,7 +364,7 @@ post = ""
 typeit = false
 
 [params.header.subtitle]
-name = "技术、笔记与生活的共振"
+name = ""
 typeit = false
 
 # 面包屑导航
